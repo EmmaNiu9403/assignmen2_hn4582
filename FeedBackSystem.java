@@ -1,3 +1,6 @@
+/**
+ * feedback system
+ */
 package assignment2;
 
 import java.util.Arrays;
@@ -5,7 +8,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class FeedBackSystem {
-	String feedbackResults= new String();
 	 public static int countBlack=0, countWhite=0;
 	public String[] Compare(String[] givenPattern, String[] guessPattern,int numberOfPegs) {
 		String[] feedback = new String[numberOfPegs];
@@ -52,6 +54,8 @@ public class FeedBackSystem {
 		if(s[0]=="-1")
 			System.out.println("		-> INVALID INPUT");
 		else{
+			countBlack=0;
+			countWhite=0;
 		for(int i=0;i<s.length;i++){
 			if(s[i]=="B") countBlack++;
 			else if(s[i]=="W") countWhite++;
